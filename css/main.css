@@ -65,6 +65,7 @@ nav.contact .contact{
 	background-color:#e35885;
 }
 
+
 p{
 	font-size:22px;
 	font-weight:bold;
@@ -80,3 +81,16 @@ p b{
 	text-transform:uppercase;
 	font-size:18px;
 }
+
+.in-tab .inactive {
+  display: none;
+}
+
+.in-tab .active {
+  display: block;
+}
+
+.active {
+  display: none;
+}
+
