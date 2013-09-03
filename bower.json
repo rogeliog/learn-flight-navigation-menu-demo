@@ -1,0 +1,20 @@
+{
+  "name": "random-generator",
+  "version": "0.0.0",
+  "authors": [
+    "Rogelio Guzman <chinog9@gmail.com>"
+  ],
+  "description": "A random number generator",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.8",
+    "flight": "~1.1.0"
+  }
+}
