@@ -3,17 +3,17 @@ define(function (require) {
 
   var defineComponent = require('flight/lib/component');
 
-  return defineComponent(menuItem);
+  return defineComponent(randomNumber);
 
-  function menuItem() {
-    this.select = function (e) {
+  function randomNumber() {
+    this.requestRefreshWithRandom = function (e, data) {
       this.trigger('uiMenuContentRefreshRequested', {
-        value: this.$node.text()
+        value: Math.random()
       });
     }
 
     this.after('initialize', function () {
-      this.on('click', this.select);
+      this.on('click', this.requestRefreshWithRandom);
     });
   }
 });

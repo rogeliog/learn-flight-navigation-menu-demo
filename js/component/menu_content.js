@@ -7,11 +7,14 @@ define(function (require) {
 
   function menuContent() {
     this.setText = function (e, data) {
-      this.$node.html(data.value);
+      setTimeout(function () {
+        this.$node.html(data.value);
+        this.trigger('uiMenuContentRefreshServed', data);
+      }.bind(this), 500);
     }
 
     this.after('initialize', function () {
-      this.on('uiMenuItemSelected', this.setText);
+      this.on(document, 'uiMenuContentRefreshRequested', this.setText);
     });
   }
 });

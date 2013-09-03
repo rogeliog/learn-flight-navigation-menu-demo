@@ -11,12 +11,12 @@ define(function (require) {
     });
 
     this.setSelectedClass = function (e, data) {
-      this.$node.addClass('in-tab');
+      this.$node.addClass('with-content');
       this.select('nav').removeClass().addClass(data.value);
     }
 
     this.after('initialize', function () {
-      this.on('uiMenuItemSelected', this.setSelectedClass);
+      this.on('uiMenuContentRefreshServed', this.setSelectedClass);
     });
   }
 });

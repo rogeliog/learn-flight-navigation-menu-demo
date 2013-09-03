@@ -82,11 +82,11 @@ p b{
 	font-size:18px;
 }
 
-.in-tab .inactive {
+.with-content .inactive {
   display: none;
 }
 
-.in-tab .active {
+.with-content .active {
   display: block;
 }
 
