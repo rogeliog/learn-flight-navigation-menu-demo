@@ -6,17 +6,12 @@ define(function (require) {
   return defineComponent(menu);
 
   function menu() {
-    this.defaultAttrs({
-      nav: 'nav'
-    });
-
     this.setSelectedClass = function (e, data) {
-      this.$node.addClass('with-content');
-      this.select('nav').removeClass().addClass(data.value);
+      this.$node.removeClass().addClass(data.section);
     }
 
     this.after('initialize', function () {
-      this.on('uiMenuContentRefreshServed', this.setSelectedClass);
+      this.on(document, 'uiMenuContentRefreshServed', this.setSelectedClass);
     });
   }
 });

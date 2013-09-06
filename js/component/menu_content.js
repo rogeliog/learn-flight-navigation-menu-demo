@@ -7,10 +7,8 @@ define(function (require) {
 
   function menuContent() {
     this.setText = function (e, data) {
-      setTimeout(function () {
-        this.$node.html(data.value);
-        this.trigger('uiMenuContentRefreshServed', data);
-      }.bind(this), 500);
+      this.$node.html(data.markup);
+      this.trigger('uiMenuContentRefreshServed', data);
     }
 
     this.after('initialize', function () {

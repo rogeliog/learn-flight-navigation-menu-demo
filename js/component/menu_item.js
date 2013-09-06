@@ -7,8 +7,10 @@ define(function (require) {
 
   function menuItem() {
     this.select = function (e) {
+      var value = this.$node.text();
       this.trigger('uiMenuContentRefreshRequested', {
-        value: this.$node.text()
+        section: value,
+        markup: '<b>' + value + '</b>'
       });
     }
 
