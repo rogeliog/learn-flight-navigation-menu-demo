@@ -7,7 +7,8 @@ define(function (require) {
 
   function menu() {
     this.setSelectedClass = function (e, data) {
-      this.$node.removeClass().addClass(data.section);
+      var className = data.section.toLowerCase();
+      this.$node.removeClass().addClass(className);
     }
 
     this.after('initialize', function () {

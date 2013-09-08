@@ -1,20 +1,12 @@
 {
-  "name": "random-generator",
+  "name": "app",
   "version": "0.0.0",
-  "authors": [
-    "Rogelio Guzman <chinog9@gmail.com>"
-  ],
-  "description": "A random number generator",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
-    "requirejs": "~2.1.8",
-    "flight": "~1.1.0"
+    "flight": "~1.1.0",
+    "requirejs": "~2.1.5"
+  },
+  "devDependencies": {
+    "jasmine-flight": "*",
+    "jasmine-jquery": "*"
   }
 }
