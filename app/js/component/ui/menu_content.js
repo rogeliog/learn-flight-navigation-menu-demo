@@ -8,11 +8,10 @@ define(function (require) {
   function menuContent() {
     this.setText = function (e, data) {
       this.$node.html(data.markup);
-      this.trigger('uiMenuContentRefreshServed', data);
     }
 
     this.after('initialize', function () {
-      this.on(document, 'uiMenuContentRefreshRequested', this.setText);
+      this.on(document, 'dataSectionChangeServed', this.setText);
     });
   }
 });

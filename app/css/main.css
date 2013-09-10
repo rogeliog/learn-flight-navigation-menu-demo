@@ -24,10 +24,7 @@ body {
   transition:background-color 0.20s;
 }
 
-#menu.home .home,
-#menu.projects .projects,
-#menu.services .services,
-#menu.contact .contact{
+.menu-item.active {
   background-color: #999;
 }
 
