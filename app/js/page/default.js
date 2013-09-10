@@ -1,14 +1,14 @@
 define(function (require) {
   'use strict';
 
-  var menuItemUI = require('component/ui/menu_item');
+  var menuTitleUI = require('component/ui/menu_title');
   var menuContentUI = require('component/ui/menu_content');
   var menuSectionData = require('component/data/menu_section');
 
   return initialize;
 
   function initialize() {
-    menuItemUI.attachTo('.menu-item');
+    menuTitleUI.attachTo('#menu');
     menuContentUI.attachTo('.menu-content');
     menuSectionData.attachTo(document)
   }
