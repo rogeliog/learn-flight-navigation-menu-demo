@@ -3,13 +3,13 @@ define(function (require) {
 
   var menuItemUI = require('component/ui/menu_item');
   var menuContentUI = require('component/ui/menu_content');
-  var menuData = require('component/data/menu');
+  var menuSectionData = require('component/data/menu_section');
 
   return initialize;
 
   function initialize() {
     menuItemUI.attachTo('.menu-item');
     menuContentUI.attachTo('.menu-content');
-    menuData.attachTo(document)
+    menuSectionData.attachTo(document)
   }
 });

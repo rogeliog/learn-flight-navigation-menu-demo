@@ -6,22 +6,27 @@ define(function (require) {
   return defineComponent(menuItems);
 
   function menuItems() {
+    this.defaultAttrs({
+      activeClass: 'active'
+    });
+
     this.highlightSection = function (e, data) {
-      this.$node.removeClass('active');
+      this.$node.removeClass(this.attr.activeClass);
+
       if (this.$node.hasClass(data.section)) {
-        this.$node.addClass('active');
+        this.$node.addClass(this.attr.activeClass);
       }
     }
 
     this.requestChange = function (e) {
-      this.trigger('uiSectionChangeRequested', {
+      this.trigger('uiNeedsMenuSection', {
         section: $(e.target).text().toLowerCase()
       });
     }
 
     this.after('initialize', function () {
       this.on('click', this.requestChange);
-      this.on(document, 'dataSectionChangeServed', this.highlightSection);
+      this.on(document, 'dataMenuSection', this.highlightSection);
     });
   }
 });

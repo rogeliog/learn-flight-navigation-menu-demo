@@ -11,7 +11,7 @@ define(function (require) {
     }
 
     this.after('initialize', function () {
-      this.on(document, 'dataSectionChangeServed', this.setText);
+      this.on(document, 'dataMenuSection', this.setText);
     });
   }
 });

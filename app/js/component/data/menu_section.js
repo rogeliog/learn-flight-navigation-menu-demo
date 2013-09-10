@@ -7,14 +7,14 @@ define(function (require) {
 
   function menu() {
     this.changeSection = function (e, data) {
-      this.trigger('dataSectionChangeServed', {
+      this.trigger('dataMenuSection', {
         section: data.section,
         markup: '<b>' + data.section + '</b>'
       });
     }
 
     this.after('initialize', function () {
-      this.on('uiSectionChangeRequested', this.changeSection);
+      this.on('uiNeedsMenuSection', this.changeSection);
     });
   }
 });
