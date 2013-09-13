@@ -10,7 +10,7 @@ define(function (require) {
       itemSelector: '.menu-item'
     });
 
-    this.selectSection = function (e, data) {
+    this.highlightSection = function (e, data) {
       this.$node.removeClass().addClass(data.section);
     }
 
@@ -25,7 +25,7 @@ define(function (require) {
         itemSelector: this.requestSectionChange
       });
 
-      this.on(document, 'dataMenuSection', this.selectSection);
+      this.on(document, 'dataMenuSection', this.highlightSection);
     });
   }
 });
